@@ -1,0 +1,10 @@
+a=c("Sanika","Sai","Kiran","Krutika","Sanika")
+b=c(1,2,3,1)
+print('Original data frames')
+ab=data.frame(a,b)
+print(ab)
+print("Duplicates elements of the said data frames")
+ab[duplicated(ab))
+print("Unique rows of the said data frame")
+print(unique(ab))
+

@@ -1,0 +1,16 @@
+#Q2. Write a python program to implement multiple Linear Regression modelfor a car dataset.
+#Dataset can be downloaded from:
+#https://www.w3schools.com/python/python_ml_multiple_regression.asp
+
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+df = pd.read_csv('cars.csv')
+print(df)
+X = df[['Volume','Weight']]
+y = df['CO2']
+reg = LinearRegression()
+reg.fit(X,y)
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = reg.predict([[2300, 1300]])
+print("**********Model Prediction Value is ************\n\n ",predictedCO2)
+
